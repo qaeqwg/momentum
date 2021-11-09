@@ -6,9 +6,8 @@ const images = [
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-const bgImage = document.createElement("img");
+const bgImage = document.body.style;
 
-bgImage.src = `img/${chosenImage}`;
-
-console.log(chosenImage);
-document.body.appendChild(bgImage);
+bgImage.backgroundRepeat = "no-repeat";
+bgImage.backgroundImage = `url('img/${chosenImage}')`;
+bgImage.backgroundSize = "100vw 100vh";
